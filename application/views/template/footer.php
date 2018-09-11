@@ -320,7 +320,7 @@
 
           <!-- - - - - - - - - - - - - - End of footer navigation - - - - - - - - - - - - - - - - -->
 
-          <p class="copyright">&copy; 2015 <a href="index.html">Shopme</a>. All Rights Reserved.</p>
+          <p class="copyright">&copy; 2018 <a href="index.html">Eshop</a>. All Rights Reserved.</p>
 
         </div>
 

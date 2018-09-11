@@ -3,7 +3,7 @@
 	<head>
 		<!-- Basic page needs
 		============================================ -->
-		<title>ShopMe | Home</title>
+		<title>Eshop | Home</title>
 		<meta charset="utf-8">
 		<meta name="author" content="">
 		<meta name="description" content="">
@@ -492,5 +492,5 @@
 						<div class="row">
 
 							<!-- - - - - - - - - - - - - - Categories - - - - - - - - - - - - - - - - -->
-              <?php include("categories.php"); ?>
+              
           
