@@ -16,7 +16,7 @@ class product_model extends CI_Model{
     return $query->result_array();
   }
 
-  function get_products_by_category_id($id){
+  public function get_products_by_category_id($id){
     // order the categories table by product id in descending order
     $this->db->order_by('products.id');
 
@@ -27,6 +27,14 @@ class product_model extends CI_Model{
     $query = $this->db->get_where('products', array('category_id' => $id));
 
     // return the data as an array
+    return $query->result_array();
+  }
+
+  public function get_deals(){
+    $this->db->order_by('deals.id');
+
+    $query = $this->db->get('deals');
+
     return $query->result_array();
   }
 }

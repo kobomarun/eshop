@@ -1,8 +1,9 @@
 <!-- - - - - - - - - - - - - - Today's deals - - - - - - - - - - - - - - - - -->
+			<?php foreach($deals as $deal):  ?>	
 
-					<section class="section_offset animated transparent" data-animation="fadeInDown"> 
+						<section class="section_offset animated transparent" data-animation="fadeInDown"> 
 
-						<h3 class="section_title">Today's Deals</h3>
+						<h3 class="section_title"><?php echo $deal['name'];  ?></h3>
 
 						<div class="tabs type_2 products">
 
@@ -130,5 +131,5 @@
 						</div>
 
 					</section><!--/ .section_offset-->
-
+				<?php endforeach; ?>
 					<!-- - - - - - - - - - - - - - End of taday's deals - - - - - - - - - - - - - - - - -->
