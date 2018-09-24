@@ -11,7 +11,7 @@
 
 							<ul class="tabs_nav clearfix">
                 <?php foreach ($categories as $category): ?>
-                  <li> <a href="<?php echo site_url('#'.$category['name']);?>"><?php echo $category['name'];?></a></li>                  
+                  <li> <a href="<?php echo site_url('home/products/'.$category['id']);?>"><?php echo $category['name'];?></a></li>                  
                 <?php endforeach; ?>
 							</ul>
 

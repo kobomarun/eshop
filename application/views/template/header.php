@@ -73,7 +73,7 @@
 
 										<!-- - - - - - - - - - - - - - Logo - - - - - - - - - - - - - - - - -->
 
-										<a href="index.html" class="logo">
+										<a href="<?php echo base_url(); ?>" class="logo">
 
 											<img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
 

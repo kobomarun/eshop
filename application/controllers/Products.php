@@ -28,25 +28,22 @@ class Products extends CI_Controller{
 
   }
 
-  public function view($page = 'products'){
+  public function category($id){
+		// creating the title from the category id
+		// $data['title'] = $this->category_model->get_category($id)->name;
+		$data['categories'] = $this->category_model->get_categories();
 
-     // creating the title from the category id
-     $data['title'] = $this->product_model->get_products_by_category_id($id)->name;
+		// fetching the post id from Product model
+		$data['products'] = $this->product_model->get_products_by_category_id($id);
 
-    // check if path exists
-    if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
-      show_404();
-    }
+		$data['deals'] = $this->product_model->get_deals();
 
-    // store page name in title with first caps first letter
-    // $data['title'] = ucfirst($page);
-
-    // load view
-    $this->load->view('template/header');
-    $this->load->view('pages/'.$page, $data);
-    $this->load->view('template/footer');
-
-  }
+		 // load the categories post view
+		$this->load->view('template/header');		
+		$this->load->view('products/index', $data);			
+		$this->load->view('template/footer');
+	}
+	
 }
 
 ?>
