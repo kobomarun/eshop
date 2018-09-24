@@ -33,6 +33,7 @@
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/owlcarousel/owl.carousel.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/js/arcticmodal/jquery.arcticmodal.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css">
 
 		<!-- JS Libs
 		============================================ -->
@@ -271,13 +272,9 @@
 
 												<ul class="categories_list dropdown">
 
-													<li class="animated_item"><a href="#">Medicine &amp; Health</a></li>
-													<li class="animated_item"><a href="#">Beauty</a></li>
-													<li class="animated_item"><a href="#">Personal Care</a></li>
-													<li class="animated_item"><a href="#">Vitamins &amp; Supplements</a></li>
-													<li class="animated_item"><a href="#">Baby Needs</a></li>
-													<li class="animated_item"><a href="#">Diet &amp; Fitness</a></li>
-													<li class="animated_item"><a href="#">Sexual Well-being</a></li>
+													<?php foreach ($categories as $category): ?>
+														<li class="animated_item" > <a href="<?php echo site_url('#'.$category['name']);?>"><?php echo $category['name'];?></a></li>                  
+													<?php endforeach; ?>
 
 												</ul>
 

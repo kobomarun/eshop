@@ -7,9 +7,15 @@ class product_model extends CI_Model{
     parent::__construct();
   }
   
-  public function get_products(){
-    // order the categories table by name
-    $this->db->order_by('id');
+  public function get_products($limit = FALSE, $offset = FALSE){
+
+    // check for limit per page
+    if ($limit) {
+      $this->db->limit($limit, $offset);
+    }  
+
+    // order the post in descending order by post id
+    $this->db->order_by('products.id','DESC');
 
     $query = $this->db->get('products');
 
@@ -37,6 +43,7 @@ class product_model extends CI_Model{
 
     return $query->result_array();
   }
+
 }
 
 ?>

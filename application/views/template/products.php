@@ -3,7 +3,7 @@
 
 						<section class="section_offset animated transparent" data-animation="fadeInDown"> 
 
-						<h3 class="section_title"><?php echo $deal['name'];  ?></h3>
+						<h3 class="<?php echo $deal['id'] == 1 ? 'section_title' : '' ; ?>"><?php echo $deal['name'];  ?></h3>
 
 						<div class="tabs type_2 products">
 

@@ -11,7 +11,7 @@ class Home extends CI_Controller {
 
 		
 
-		$this->load->view('template/header');
+		$this->load->view('template/header', $data);
 		$this->load->view('template/categories', $data);
 		$this->load->view('home');	
 		$this->load->view('template/products', $data);	
