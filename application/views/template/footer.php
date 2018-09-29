@@ -545,6 +545,7 @@
 ============================================ -->
 <script src="<?php echo base_url(); ?>assets/js/theme.plugins.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/theme.core.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
 
 </body>
 </html>

@@ -7,7 +7,9 @@ class Home extends CI_Controller {
 	{
 		$data['categories'] = $this->category_model->get_categories();
 		$data['products'] = $this->product_model->get_products();
-		$data['deals'] = $this->product_model->get_deals();
+		$data['product1'] = $this->product_model->get_products_by_category_id(2);
+		$data['product2'] = $this->product_model->get_products_by_category_id(6);
+		// $data['product12'] = $this->product_model->get_specific_products();
 
 		
 
@@ -24,7 +26,7 @@ class Home extends CI_Controller {
 		// $data['title'] = $this->category_model->get_category($id)->name;
 		$data['categories'] = $this->category_model->get_categories();
 
-		// fetching the post id from Product model
+		
 		$data['products'] = $this->product_model->get_products_by_category_id($id);
 
 		$data['deals'] = $this->product_model->get_deals();

@@ -11,7 +11,7 @@
 
   <ul class="tabs_nav clearfix">
     <?php foreach ($categories as $category): ?>
-      <li> <a href="<?php echo site_url('products/category/'.$category['id']);?>"><?php echo $category['name'];?></a></li>                  
+      <li> <a href="<?php echo base_url('products/category/'.$category['id']);?>"><?php echo $category['name'];?></a></li>                  
     <?php endforeach; ?>
   </ul>
   <br>
@@ -21,9 +21,9 @@
   <!-- - - - - - - - - - - - - - Tabs container - - - - - - - - - - - - - - - - -->
 
   <div class="tab_containers_wrap">
-
+    
     <div id="tab-1" class="tab_container">
-
+    
       <!-- - - - - - - - - - - - - - Carousel of today's deals - - - - - - - - - - - - - - - - -->
 
       
@@ -39,7 +39,7 @@
 
           <div class="image_wrap">
 
-            <img src="<?php echo base_url(); ?>assets/images/deals_img_1.jpg" alt="">
+            <img src="<?php echo base_url(); ?>assets/images/<?php echo $product['photo'] ?>" alt="">
 
             <!-- - - - - - - - - - - - - - Product actions - - - - - - - - - - - - - - - - -->
 

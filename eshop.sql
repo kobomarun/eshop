@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2018 at 12:09 PM
+-- Generation Time: Sep 25, 2018 at 03:14 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -75,6 +75,7 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `photo` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `rating` int(1) NOT NULL,
   `price` float NOT NULL
@@ -84,15 +85,15 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `name`, `description`, `rating`, `price`) VALUES
-(1, 1, 'Paracetamol', 'Pain killler', 4, 100),
-(2, 1, 'Mist Mag', 'For ulcer patients', 5, 500),
-(3, 2, 'Mary Kay Powder', 'Brown Powder', 3, 150),
-(4, 2, 'Concealer', 'For Hiding things', 4, 355),
-(5, 3, 'Medicated Soap', 'Ward off infection', 3, 400),
-(6, 3, 'Dusting Powder', 'Heat Rash ', 2, 670),
-(7, 4, 'GNLD Products', 'Ever living products', 1, 5000),
-(8, 4, 'Cod Liver Oil', 'Nurishment', 5, 6500);
+INSERT INTO `products` (`id`, `category_id`, `name`, `photo`, `description`, `rating`, `price`) VALUES
+(1, 1, 'Paracetamol', 'ibuprofen.jpg', 'Pain killler', 4, 100),
+(2, 1, 'Mist Mag', 'ibuprofen.jpg', 'For ulcer patients', 5, 500),
+(3, 2, 'Mary Kay Powder', 'ibuprofen.jpg', 'Brown Powder', 3, 150),
+(4, 2, 'Concealer', 'dusting.jpg', 'For Hiding things', 4, 355),
+(5, 3, 'Medicated Soap', 'dusting.jpg', 'Ward off infection', 3, 400),
+(6, 3, 'Dusting Powder', 'dusting.jpg', 'Heat Rash ', 2, 670),
+(7, 4, 'GNLD Products', 'dusting.jpg', 'Ever living products', 1, 5000),
+(8, 4, 'Cod Liver Oil', 'ibuprofen.jpg', 'Nurishment', 5, 6500);
 
 -- --------------------------------------------------------
 

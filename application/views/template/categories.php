@@ -16,7 +16,7 @@
       
       
     <?php endforeach; ?>
-  <li class="has_megamenu"><a href="<?php echo base_url(); ?>/products/index" class="all"><b>All Categories</b></a></li>
+  <li class="has_megamenu"><a href="<?php echo base_url(); ?>products/index" class="all"><b>All Categories</b></a></li>
     </ul>
 
   </section><!--/ .animated.transparent-->

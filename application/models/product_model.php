@@ -14,19 +14,20 @@ class product_model extends CI_Model{
       $this->db->limit($limit, $offset);
     }  
 
-    // order the post in descending order by post id
-    $this->db->order_by('products.id','DESC');
+    // order the products in descending order by product id
+    $this->db->order_by('products.id','RANDOM');
 
     $query = $this->db->get('products');
 
     return $query->result_array();
   }
 
+
   public function get_products_by_category_id($id){
     // order the categories table by product id in descending order
-    $this->db->order_by('products.id');
+    $this->db->order_by('products.id', 'DESC');
 
-    // join/link the category table id to the post table category name
+    // join/link the category table id to the product table category name
     $this->db->join('categories', 'categories.id = products.category_id');
 
     // get the data from the table and store in query
