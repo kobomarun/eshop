@@ -91,7 +91,7 @@
 
 											<ul class="topbar">
 
-												<li><a href="index.html">Home</a></li>
+												<li><a href="<?php echo base_url(); ?>">Home</a></li>
 												<li><a href="#">My Account</a></li>
 												<?php if($this->session->userdata('isLoggedIn')== true) { ?>
 												<li><a href="<?php echo base_url(); ?>users/signout">Logout</a></li>

@@ -13,7 +13,7 @@
 
 						<h4>User Registration</h4>
 
-						<p class="subcaption">Already registered? Please log in here</p>
+						<p class="subcaption">Already registered? Please log in <a href="<?php echo base_url(); ?>users/authenticate">here</a></p>
 
 						<form id="login_form" class="type_2" method="post" action="<?php echo base_url(); ?>users/registrationProcess">
 							<ul>
