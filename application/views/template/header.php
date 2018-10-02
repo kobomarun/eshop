@@ -93,18 +93,12 @@
 
 												<li><a href="index.html">Home</a></li>
 												<li><a href="#">My Account</a></li>
-												<li><a href="#">Shopping Cart</a></li>
-												<li><a href="#">Checkout</a></li>
-												<li><a href="#">Blog</a></li>
-												<li><a href="#">Contact us</a></li>
-												<li class="has_submenu">
-
-													<a href="#">Pages</a>
-
-
-												</li>
-												<li><a href="#" data-modal-url="modals/login.html">Login</a></li>
-
+												<?php if($this->session->userdata('isLoggedIn')== true) { ?>
+												<li><a href="<?php echo base_url(); ?>users/signout">Logout</a></li>
+											<?php } else { ?>
+												<li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
+												<li><a href="<?php echo base_url(); ?>users">Login</a></li>
+											<?php } ?>
 											</ul>
 
 										</nav>
