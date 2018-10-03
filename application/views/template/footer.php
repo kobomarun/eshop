@@ -547,5 +547,18 @@
 <script src="<?php echo base_url(); ?>assets/js/theme.core.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
 
+<script type="text/javascript">
+  // To conform clear all data in cart.
+  function clear_cart() {
+    var result = confirm('Are you sure want to clear all bookings?');
+
+    if (result) {
+      window.location = "<?php echo base_url(); ?>cart/remove/all";
+    } else {
+      return false; // cancel button
+    }
+  }
+</script>
+
 </body>
 </html>

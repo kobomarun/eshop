@@ -49,7 +49,27 @@
 
                 <a href="#" class="button_dark_grey middle_btn quick_view" data-modal-url="modals/quick_view.html">Quick View</a>
 
-                <a href="#" class="button_blue middle_btn add_to_cart">Add to Cart</a>
+                <?php
+                        
+                  // Create form and send values in 'cart/add' function.
+                  echo form_open('cart/add');
+                  echo form_hidden('id', $product['id']);
+                  echo form_hidden('name', $product['name']);
+                  echo form_hidden('price', $product['price']);
+                  ?>  
+                  <div id='add_button'>
+                  <?php
+                  $btn = array(
+                    'class' => 'button_blue middle_btn add_to_cart',
+                    'value' => 'Add to Cart',
+                    'name' => 'action'
+                  );
+                
+                  // Submit Button.
+                  echo form_submit($btn);
+                  echo form_close();
+                ?>
+                </div>
 
               </div><!--/ .centered_buttons -->
 

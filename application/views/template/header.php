@@ -93,12 +93,12 @@
 
 												<li><a href="<?php echo base_url(); ?>">Home</a></li>
 												<li><a href="#">My Account</a></li>
-												<?php if($this->session->userdata('isLoggedIn')== true) { ?>
-												<li><a href="<?php echo base_url(); ?>users/signout">Logout</a></li>
-											<?php } else { ?>
-												<li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
-												<li><a href="<?php echo base_url(); ?>users">Login</a></li>
-											<?php } ?>
+												<?php if($this->session->userdata('isLoggedIn') == true) { ?>
+													<li><a href="<?php echo base_url(); ?>users/signout">Logout</a></li>
+												<?php } else { ?>
+													<li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
+													<li><a href="<?php echo base_url(); ?>users">Login</a></li>
+												<?php } ?>
 											</ul>
 
 										</nav>
@@ -145,7 +145,7 @@
 
 											<div class="alignright site_settings">
 
-												<span class="current open_"><img src=<?php echo base_url(); ?>assets/"images/flag_en.jpg" alt="">English</span>
+												<span class="current open_"><img src="<?php echo base_url(); ?>assets/images/flag_en.jpg" alt="">English</span>
 
 												<ul class="dropdown site_setting_list language">
 
@@ -197,45 +197,3 @@
 											<!-- - - - - - - - - - - - - - End of wishlist & compare counters - - - - - - - - - - - - - - - - -->
 
 											<!-- - - - - - - - - - - - - - Shopping cart - - - - - - - - - - - - - - - - -->
-
-											<div class="shopping_cart_wrap">
-
-												<button id="open_shopping_cart" class="open_button" data-amount="3">
-													<b class="title">My Cart</b>
-													<b class="total_price">$0.00</b>
-												</button>
-											</div><!--/ .shopping_cart_wrap.align_left-->
-
-											<!-- - - - - - - - - - - - - - End of shopping cart - - - - - - - - - - - - - - - - -->
-
-										</div><!--/ .align_right-->
-
-									</div><!--/ [col]-->
-
-								</div><!--/ .main_header_row-->
-
-							</div><!--/ .row-->
-
-						</div><!--/ .container-->
-
-					</div>
-
-				</div><!--/ .bottom_part -->
-
-				<!-- - - - - - - - - - - - - - End of bottom part - - - - - - - - - - - - - - - - -->
-
-			</header>
-
-			<!-- - - - - - - - - - - - - - End Header - - - - - - - - - - - - - - - - -->
-
-			<!-- - - - - - - - - - - - - - Page Wrapper - - - - - - - - - - - - - - - - -->
-
-			<div class="page_wrapper">
-
-				<div class="container">
-
-					<div class="section_offset">
-
-						<div class="row">
-
-							<!-- - - - - - - - - - - - - - Categories - - - - - - - - - - - - - - - - -->

@@ -779,6 +779,10 @@
 			color:#333;
 		}
 
+		#open_shopping_cart .view_cart{
+			font-size: 12px;
+		}
+
 		#open_shopping_cart::before{
 			font-family: 'fontello';
 			content: '\eb77';
