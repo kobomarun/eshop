@@ -71,7 +71,9 @@
 						<div class="right_side v_centered">
 
 							<h4>or</h4>
-              <button type="submit" form="login_form" class="button_blue middle_btn">Register</button>
+            <a href="<?php echo base_url(); ?>users/register">
+              <button type="button" form="login_form" class="button_blue middle_btn">Register</button>
+            </a>
 						</div>
 
 					</div>

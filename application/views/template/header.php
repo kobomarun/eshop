@@ -92,13 +92,13 @@
 											<ul class="topbar">
 
 												<li><a href="<?php echo base_url(); ?>">Home</a></li>
-												<li><a href="#">My Account</a></li>
-												<?php if($this->session->userdata('isLoggedIn') == true) { ?>
-													<li><a href="<?php echo base_url(); ?>users/signout">Logout</a></li>
-												<?php } else { ?>
-													<li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
-													<li><a href="<?php echo base_url(); ?>users">Login</a></li>
-												<?php } ?>
+												<li><a href="<?php echo base_url(); ?>myaccount">My Account</a></li>
+												<?php if($this->session->userdata('isLoggedIn')== true) { ?>
+												<li><a href="<?php echo base_url(); ?>users/signout">Logout</a></li>
+											<?php } else { ?>
+												<li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
+												<li><a href="<?php echo base_url(); ?>users">Login</a></li>
+											<?php } ?>
 											</ul>
 
 										</nav>

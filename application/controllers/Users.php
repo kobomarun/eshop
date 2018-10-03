@@ -5,6 +5,10 @@ class Users extends CI_Controller {
 
 	public function index() {
 		$data['categories'] = $this->category_model->get_categories();
+		if($this->session->userdata('isLoggedIn') == true) {
+			$this->session->set_flashdata('success', 'Please login to view your account page');
+			redirect(base_url()."myaccount");
+		}
 
 		$this->load->view('template/header',$data);
 		$this->load->view('template/categories', $data);
@@ -48,7 +52,7 @@ class Users extends CI_Controller {
 					$this->db->where('id',$user_id);
 					$this->db->update('all_users',$data2);
 					$this->session->set_userdata($userSessionData);
-					redirect(base_url());
+					redirect(base_url()."myaccount");
 				} else {
 
 					$this->session->set_flashdata('error', 'Invalid email or password');
@@ -59,8 +63,8 @@ class Users extends CI_Controller {
 	}
 
 	public function signout() {
-		$this->session->set_flashdata('success', 'You have successfully signed out');
 		$this->session->sess_destroy();
+		$this->session->set_flashdata('success', 'You have successfully signed out');
 
 		redirect('users');
 	}

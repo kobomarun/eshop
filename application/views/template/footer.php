@@ -86,129 +86,6 @@
 
           <!-- - - - - - - - - - - - - - Blog widget - - - - - - - - - - - - - - - - -->
 
-          <section class="widget">
-
-            <h4>Latest News</h4>
-
-            <ul class="list_of_entries">
-
-              <!-- - - - - - - - - - - - - - Entry - - - - - - - - - - - - - - - - -->
-
-              <li>
-
-                <article class="entry">
-
-                  <!-- - - - - - - - - - - - - - Thumbnail - - - - - - - - - - - - - - - - -->
-
-                  <a href="#" class="entry_thumb">
-
-                    <img src="images/latest_news_thumb_1.jpg" alt="">
-
-                  </a>
-
-                  <!-- - - - - - - - - - - - - - End of thumbnail - - - - - - - - - - - - - - - - -->
-
-                  <div class="wrapper">
-
-                    <h6 class="entry_title"><a href="#">Vestibulum sed ante</a></h6>
-
-                    <!-- - - - - - - - - - - - - - Byline - - - - - - - - - - - - - - - - -->
-
-                    <div class="entry_meta">
-
-                      <span><i class="icon-calendar"></i> 2014-08-05 07:01:49</span>
-
-                    </div><!--/ .entry_meta-->
-
-                    <!-- - - - - - - - - - - - - - End of byline - - - - - - - - - - - - - - - - -->
-
-                  </div><!--/ .wrapper-->
-
-                </article><!--/ .clearfix-->
-
-              </li>
-
-              <!-- - - - - - - - - - - - - - End of entry - - - - - - - - - - - - - - - - -->
-
-              <!-- - - - - - - - - - - - - - Entry - - - - - - - - - - - - - - - - -->
-
-              <li>
-
-                <article class="entry">
-
-                  <!-- - - - - - - - - - - - - - Thumbnail - - - - - - - - - - - - - - - - -->
-
-                  <a href="#" class="entry_thumb">
-
-                    <img src="images/latest_news_thumb_2.jpg" alt="">
-
-                  </a>
-
-                  <!-- - - - - - - - - - - - - - End of thumbnail - - - - - - - - - - - - - - - - -->
-
-                  <div class="wrapper">
-
-                    <h6 class="entry_title"><a href="#">Nulla venenatis</a></h6>
-
-                    <!-- - - - - - - - - - - - - - Byline - - - - - - - - - - - - - - - - -->
-
-                    <div class="entry_meta">
-
-                      <span><i class="icon-calendar"></i> 2014-08-05 07:01:49</span>
-
-                    </div><!--/ .entry_meta-->
-
-                    <!-- - - - - - - - - - - - - - End of byline - - - - - - - - - - - - - - - - -->
-
-                  </div><!--/ .wrapper-->
-
-                </article><!--/ .clearfix-->
-
-              </li>
-
-              <!-- - - - - - - - - - - - - - End of entry - - - - - - - - - - - - - - - - -->
-
-              <!-- - - - - - - - - - - - - - Entry - - - - - - - - - - - - - - - - -->
-
-              <li>
-
-                <article class="entry">
-
-                  <!-- - - - - - - - - - - - - - Thumbnail - - - - - - - - - - - - - - - - -->
-
-                  <a href="#" class="entry_thumb">
-
-                    <img src="images/latest_news_thumb_3.jpg" alt="">
-
-                  </a>
-
-                  <!-- - - - - - - - - - - - - - End of thumbnail - - - - - - - - - - - - - - - - -->
-
-                  <div class="wrapper">
-
-                    <h6 class="entry_title"><a href="#">Pellentesque sed dolor</a></h6>
-
-                    <!-- - - - - - - - - - - - - - Byline - - - - - - - - - - - - - - - - -->
-
-                    <div class="entry_meta">
-
-                      <span><i class="icon-calendar"></i> 2014-08-05 07:01:49</span>
-
-                    </div><!--/ .entry_meta-->
-
-                    <!-- - - - - - - - - - - - - - End of byline - - - - - - - - - - - - - - - - -->
-
-                  </div><!--/ .wrapper-->
-
-                </article><!--/ .clearfix-->
-
-              </li>
-
-              <!-- - - - - - - - - - - - - - End of entry - - - - - - - - - - - - - - - - -->
-
-            </ul>
-
-          </section><!--/ .widget-->
 
           <!-- - - - - - - - - - - - - - End of blog widget - - - - - - - - - - - - - - - - -->
 
@@ -300,27 +177,8 @@
 
           <!-- - - - - - - - - - - - - - End of payments - - - - - - - - - - - - - - - - -->
 
-          <!-- - - - - - - - - - - - - - Footer navigation - - - - - - - - - - - - - - - - -->
 
-          <nav class="footer_nav">
-
-            <ul class="bottombar">
-
-              <li><a href="#">Medicine &amp; Health</a></li>
-              <li><a href="#">Beauty</a></li>
-              <li><a href="#">Personal Care</a></li>
-              <li><a href="#">Vitamins &amp; Supplements</a></li>
-              <li><a href="#">Baby Needs</a></li>
-              <li><a href="#">Diet &amp; Fitness</a></li>
-              <li><a href="#">Sexual Well-being</a></li>
-
-            </ul>
-
-          </nav>
-
-          <!-- - - - - - - - - - - - - - End of footer navigation - - - - - - - - - - - - - - - - -->
-
-          <p class="copyright">&copy; 2018 <a href="index.html">Eshop</a>. All Rights Reserved.</p>
+          <p class="copyright">&copy; 2018 N8 Shop<a href="<?php echo base_url(); ?>">N8 Shop</a>. All Rights Reserved.</p>
 
         </div>
 
@@ -468,57 +326,6 @@
 
   <!-- - - - - - - - - - - - - - End contact us - - - - - - - - - - - - - - - - -->
 
-  <!-- - - - - - - - - - - - - - Google map - - - - - - - - - - - - - - - - -->
-
-  <li>
-
-    <button class="icon_btn middle_btn social_gmap open_"><i class="icon-location-4"></i></button>
-
-    <!--Location-->
-
-    <section class="dropdown">
-
-      <div class="animated_item">
-
-        <h3 class="title">Store Location</h3>
-
-      </div><!--/ .animated_item-->
-
-      <div class="animated_item">
-
-        <p class="c_info_location">8901 Marmora Road,<br>Glasgow, D04 89GR.</p>
-
-        <div class="proportional_frame">
-
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3024.238131852431!2d-74.006059!3d40.712773999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258fda88cefb3%3A0x7f1e88758d210007!2z0J3RjNGOLdC50L7RgNC60YHQutC40Lkg0KHQuNGC0Lgt0YXQvtC70Ls!5e0!3m2!1sru!2sua!4v1415946524959" style="border:0"></iframe>
-
-        </div>
-
-        <ul class="c_info_list">
-
-          <li class="c_info_phone">800-599-65-80</li>
-          <li class="c_info_mail"><a href="mailto:#">info@companyname.com</a></li>
-          <li class="c_info_schedule">
-
-            <ul>
-
-              <li>Monday-Friday: 8.00-20.00</li>
-              <li>Saturday: 9.00-15.00</li>
-              <li>Sunday: closed</li>
-
-            </ul>
-
-          </li>
-
-        </ul>
-
-      </div><!--/ .animated_item-->
-
-    </section><!--/ .dropdown-->
-
-  </li>
-
-  <!-- - - - - - - - - - - - - - End google map - - - - - - - - - - - - - - - - -->
 
 </ul>
 
