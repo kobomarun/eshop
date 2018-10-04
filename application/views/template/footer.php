@@ -178,7 +178,7 @@
           <!-- - - - - - - - - - - - - - End of payments - - - - - - - - - - - - - - - - -->
 
 
-          <p class="copyright">&copy; 2018 N8 Shop<a href="<?php echo base_url(); ?>">N8 Shop</a>. All Rights Reserved.</p>
+          <p class="copyright">&copy; 2018 <a href="<?php echo base_url(); ?>">N8 Shop</a>. All Rights Reserved.</p>
 
         </div>
 
@@ -365,6 +365,36 @@
       return false; // cancel button
     }
   }
+
+  // function changeItemQuantity( id , num ) {
+  //   var qty_id = "cart[" + id + "][qty]";
+  //   var currentVal = parseInt( $(qty_id).value );
+  //   if ( currentVal != NaN )
+  //   {
+  //       $(qty_id).value = currentVal + num;
+  //       $("products-table-basket").submit();
+  //   }
+  // }
+
+  // 
+  
+ //&lt;![CDATA[
+  jQuery(function($) {
+        $('.increase').click(function() {
+          $qty = $(this).parent().find('.qty');
+          qty = parseInt($qty.val()) + 1;
+          $qty.val(qty);
+        });
+        $('.decrease').click(function() {
+          $qty = $(this).parent().find('.qty');
+          qty = parseInt($qty.val()) - 1;
+          if (qty < 0)
+            qty = 0;
+          $qty.val(qty);
+        });
+      });
+      //]]&gt;
+
 </script>
 
 </body>

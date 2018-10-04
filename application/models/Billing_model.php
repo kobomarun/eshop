@@ -30,6 +30,14 @@
     {
       $this->db->insert('order_detail', $data);
     }
+
+    public function selectProductByProductId($product_id){  
+      // get the data from the table and store in query
+      $query = $this->db->get_where('products', array('id' => $product_id));
+  
+      // return the data as an array
+      return $query->result_array();
+    }
   }
 
 

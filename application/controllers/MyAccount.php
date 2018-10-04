@@ -14,6 +14,7 @@ class MyAccount extends CI_Controller {
 	{
 		$data['categories'] = $this->category_model->get_categories();
 		$this->load->view('template/header',$data);
+		// $this->load->view('cart/index', $data);
 		$this->load->view('template/profile-menu');
 		$this->load->view('myaccount');
 		$this->load->view('template/footer');

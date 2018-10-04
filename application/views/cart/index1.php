@@ -16,7 +16,7 @@
                   // Create form and send all values in "cart/update_cart" function.
                   // echo form_open('cart/update_cart');
                   // $grand_total = 0;
-                    $i = 1;
+                    $i = 0;
 
                     foreach ($cart as $item):
                         //   echo form_hidden('cart[' . $item['id'] . '][id]', $item['id']);
@@ -29,12 +29,12 @@
                         // echo form_hidden('cart[' . $item['id'] . '][price]', $item['price']);
                         // echo form_hidden('cart[' . $item['id'] . '][qty]', $item['qty']);
                         ?>
-                    <a href="<?php echo base_url(); ?>cart/view" >
-                    <button id="open_shopping_cart" class="" data-amount="<?php echo $i++; ?>">
+                    <?php  $i++; ?>
+                    <button id="open_shopping_cart" class="" data-amount="<?php echo $i; ?>">
                       <b class="">My Cart</b>
                       
-                      <b class="">View Cart</b>
-                    </button></a>
+                      <b style="font-size: 12px;"><?php echo $i; ?> Product(s) <br>in Cart </b>
+                    </button>
                   <?php endforeach; ?>
                   <?php endif; ?>
                 

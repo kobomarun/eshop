@@ -22,7 +22,7 @@
 		
 		//send all product data to "shopping_view", which fetch from database.
 		$this->load->view('template/header', $data);
-		$this->load->view('cart/index', $data);
+		// $this->load->view('cart/index', $data);
 		$this->load->view('template/categories', $data);
 		$this->load->view('home');	
 		$this->load->view('template/products', $data);	
@@ -34,24 +34,31 @@
 
 	public function view(){
 		//Get all data from database
-		$data['products1'] = $this->billing_model->get_all();
+		$data['products'] = $this->billing_model->get_all();
+		$data['categories'] = $this->category_model->get_categories();
 
-		$this->load->view('cart/shopping_view', $data);
+		$this->load->view('cart/view', $data);
+		$this->load->view('template/footer');
 	}
 	
 	
 	public function add()
 	{
+		$product_id = $this->input->post('id');
+		$result = $this->billing_model->selectProductByProductId($product_id);
     // Set array for send data.
 		$insert_data = array(
 			'id' => $this->input->post('id'),
 			'name' => $this->input->post('name'),
 			'price' => $this->input->post('price'),
-			'qty' => 1
+			'qty' => 1,
+			'photo' => $result['photo']
 		);		
 
     // This function add items into cart.
 		$this->cart->insert($insert_data);
+
+		$data['image'] = $result['photo'];
 	      
     // This will show insert data in cart.
 		redirect('cart');
@@ -92,27 +99,29 @@
         'price'   => $price,
         'amount' =>  $amount,
         'qty'     => $qty
-      );
+			);
             
       $this->cart->update($data);
     }
-    redirect('cart');        
-  }	
-        function billing_view(){
-                // Load "billing_view".
+    redirect('cart/view');        
+	}	
+	
+	
+	function billing_view(){
+		// Load "billing_view".
 		$this->load->view('cart/billing_view');
-        }
+	}
         
-        	public function save_order()
+	public function save_order()
 	{
-          // This will store all values which inserted  from user.
+		// This will store all values which inserted  from user.
 		$customer = array(
 			'name' 		=> $this->input->post('name'),
 			'email' 	=> $this->input->post('email'),
 			'address' 	=> $this->input->post('address'),
 			'phone' 	=> $this->input->post('phone')
 		);		
-                 // And store user imformation in database.
+		// And store user imformation in database.
 		$cust_id = $this->billing_model->insert_customer($customer);
 
 		$order = array(

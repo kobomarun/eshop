@@ -197,3 +197,36 @@
 											<!-- - - - - - - - - - - - - - End of wishlist & compare counters - - - - - - - - - - - - - - - - -->
 
 											<!-- - - - - - - - - - - - - - Shopping cart - - - - - - - - - - - - - - - - -->
+											<?php include APPPATH.'views/cart/index.php';?>
+
+											</div><!--/ .align_right-->
+
+</div><!--/ [col]-->
+
+</div><!--/ .main_header_row-->
+
+</div><!--/ .row-->
+
+</div><!--/ .container-->
+
+</div>
+
+</div><!--/ .bottom_part -->
+
+<!-- - - - - - - - - - - - - - End of bottom part - - - - - - - - - - - - - - - - -->
+
+</header>
+
+<!-- - - - - - - - - - - - - - End Header - - - - - - - - - - - - - - - - -->
+
+<!-- - - - - - - - - - - - - - Page Wrapper - - - - - - - - - - - - - - - - -->
+
+<div class="page_wrapper">
+
+<div class="container">
+
+<div class="section_offset">
+
+<div class="row">
+
+<!-- - - - - - - - - - - - - - Categories - - - - - - - - - - - - - - - - -->
