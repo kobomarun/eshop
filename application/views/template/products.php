@@ -48,36 +48,36 @@
 													<div class="centered_buttons">
 
 														<a href="#" class="button_dark_grey middle_btn quick_view" data-modal-url="modals/quick_view.html">Quick View</a>
-
+														<?php if($this->session->userdata('isLoggedIn')== true) { ?>
 														 <?php
-                        
-												// Create form and send values in 'cart/add' function.
-												echo form_open('cart/add');
-												echo form_hidden('id', $product['id']);
-												echo form_hidden('name', $product['name']);
-												echo form_hidden('price', $product['price']);
-												?>  
-												<div id='add_button'>
-												<?php
-												$btn = array(
-													'class' => 'button_blue middle_btn add_to_cart',
-													'value' => 'Add to Cart',
-													'name' => 'action'
-												);
-											
-												// Submit Button.
-												echo form_submit($btn);
-												echo form_close();
-											?>
-											</div>
-			
+															
+															// Create form and send values in 'cart/add' function.
+															echo form_open('cart/add');
+															echo form_hidden('id', $product['id']);
+															echo form_hidden('name', $product['name']);
+															echo form_hidden('price', $product['price']);
+															?>  
+															<div id='add_button'>
+															<?php
+															$btn = array(
+																'class' => 'button_blue middle_btn add_to_cart',
+																'value' => 'Add to Cart',
+																'name' => 'action'
+															);
+														
+															// Submit Button.
+															echo form_submit($btn);
+															echo form_close();
+														?>
+													</div>
+											<?php } ?>
 
 													</div><!--/ .centered_buttons -->
-
+													<?php if($this->session->userdata('isLoggedIn')== true) { ?>
 													<a href="#" class="button_dark_grey def_icon_btn middle_btn add_to_wishlist tooltip_container"><span class="tooltip right">Add to Wishlist</span></a>
 
 													<a href="#" class="button_dark_grey def_icon_btn middle_btn add_to_compare tooltip_container"><span class="tooltip left">Add to Compare</span></a>
-
+													<?php } ?>
 												</div><!--/ .actions_wrap-->
 												
 												<!-- - - - - - - - - - - - - - End of product actions - - - - - - - - - - - - - - - - -->
@@ -154,15 +154,34 @@
 													<div class="centered_buttons">
 
 														<a href="#" class="button_dark_grey middle_btn quick_view" data-modal-url="modals/quick_view.html">Quick View</a>
-
-														<a href="#" class="button_blue middle_btn add_to_cart">Add to Cart</a>
-
+														<?php if($this->session->userdata('isLoggedIn')== true) { ?>
+															<?php                        
+																// Create form and send values in 'cart/add' function.
+																echo form_open('cart/add');
+																echo form_hidden('id', $product['id']);
+																echo form_hidden('name', $product['name']);
+																echo form_hidden('price', $product['price']);
+																?>  
+																<div id='add_button'>
+																<?php
+																$btn = array(
+																	'class' => 'button_blue middle_btn add_to_cart',
+																	'value' => 'Add to Cart',
+																	'name' => 'action'
+																);
+															
+																// Submit Button.
+																echo form_submit($btn);
+																echo form_close();
+															?>
+															</div>
+														<?php } ?>
 													</div><!--/ .centered_buttons -->
-
+													<?php if($this->session->userdata('isLoggedIn')== true) { ?>
 													<a href="#" class="button_dark_grey def_icon_btn middle_btn add_to_wishlist tooltip_container"><span class="tooltip right">Add to Wishlist</span></a>
 
 													<a href="#" class="button_dark_grey def_icon_btn middle_btn add_to_compare tooltip_container"><span class="tooltip left">Add to Compare</span></a>
-
+													<?php } ?>
 												</div><!--/ .actions_wrap-->
 												
 												<!-- - - - - - - - - - - - - - End of product actions - - - - - - - - - - - - - - - - -->

@@ -11,7 +11,7 @@
       <li class="active"><a href="#">Account Dashboard</a></li>
       <li><a href="#">Account Information</a></li>
       <li><a href="#">My Orders</a></li>
-      <li><a href="#">My Cart</a></li>
+      <li><a href="<?php echo base_url(); ?>cart/view">My Cart</a></li>
 
     </ul>
 
@@ -31,6 +31,4 @@
 
   </div>
 
-  <!-- - - - - - - - - - - - - - End of banner - - - - - - - - - - - - - - - - -->
-
-</aside><!--/ [col]-->
+  

@@ -6,7 +6,7 @@
                   <button id="open_shopping_cart" class="" data-amount="0">
                     <b class="">My Cart</b>
                     
-                    <b >No Product <br> in Cart</b>
+                    <b >No Product in Cart</b>
                   </button>
                   <?php endif; ?>
                   <?php
@@ -30,12 +30,13 @@
                         // echo form_hidden('cart[' . $item['id'] . '][qty]', $item['qty']);
                         ?>
                     <?php  $i++; ?>
+                    <?php endforeach; ?>
                     <button id="open_shopping_cart" class="" data-amount="<?php echo $i; ?>">
                       <b class="">My Cart</b>
                       
-                      <b style="font-size: 12px;"><?php echo $i; ?> Product(s) <br>in Cart </b>
+                      <b style="font-size: 12px;"><?php echo $i; ?> Product(s) in cart</b>
                     </button>
-                  <?php endforeach; ?>
+                  
                   <?php endif; ?>
                 
                 

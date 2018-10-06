@@ -178,7 +178,7 @@
 											<!-- - - - - - - - - - - - - - End of currency change - - - - - - - - - - - - - - - - -->
 
 										</div><!--/ .clearfix-->
-
+										<?php if($this->session->userdata('isLoggedIn')== true) { ?>
 										<div class="align_right v_centered">
 
 											<!-- - - - - - - - - - - - - - Wishlist & compare counters - - - - - - - - - - - - - - - - -->
@@ -197,9 +197,11 @@
 											<!-- - - - - - - - - - - - - - End of wishlist & compare counters - - - - - - - - - - - - - - - - -->
 
 											<!-- - - - - - - - - - - - - - Shopping cart - - - - - - - - - - - - - - - - -->
+
 											<?php include APPPATH.'views/cart/index.php';?>
 
 											</div><!--/ .align_right-->
+											<?php } ?>
 
 </div><!--/ [col]-->
 

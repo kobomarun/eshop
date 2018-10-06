@@ -37,6 +37,7 @@
 		$data['products'] = $this->billing_model->get_all();
 		$data['categories'] = $this->category_model->get_categories();
 
+		$this->load->view('cart/template/header', $data);
 		$this->load->view('cart/view', $data);
 		$this->load->view('template/footer');
 	}
@@ -105,6 +106,25 @@
     }
     redirect('cart/view');        
 	}	
+
+	function order(){
+
+		$data['products'] = $this->billing_model->get_all();
+		$data['categories'] = $this->category_model->get_categories();
+
+		$this->load->view('cart/template/header', $data);
+		$this->load->view('cart/order', $data);
+		$this->load->view('template/footer');
+	}
+
+	function orders(){
+		$data['products'] = $this->billing_model->get_all();
+		$data['categories'] = $this->category_model->get_categories();
+
+		$this->load->view('cart/template/header', $data);
+		$this->load->view('cart/orders', $data);
+		$this->load->view('template/footer');
+	}
 	
 	
 	function billing_view(){

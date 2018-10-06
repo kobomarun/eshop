@@ -1829,7 +1829,7 @@
 		.order_review .product_title_col{ width: 61.40%; }
 		.order_review .product_sku_col,
 		.order_review .product_qty_col,
-		.order_review .product_price_col{ width: 90px; }
+		.order_review .product_price_col{ width: 100px; }
 		.order_review .product_total_col{ width: 150px; }
 
 		.order_review tbody td{ height: 120px; }
