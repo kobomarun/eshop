@@ -27,12 +27,14 @@
 								
 									<!-- - - - - - - - - - - - - - Carousel of today's deals - - - - - - - - - - - - - - - - -->
 
-									<div class="owl_carousel carousel_in_tabs type_2">
+									<div class="">
 										
 										<!-- - - - - - - - - - - - - - Product - - - - - - - - - - - - - - - - -->
 
 										<?php if ($count == 0): ?>
-                    <?php foreach ($products as $product): ?>
+                    <?php $cnt = 0; foreach ($products as $product): ?>
+										<?php if($cnt < 4) { ?>
+										<div class="col-md-3">
 										<div class="product_item">
 
 											<!-- - - - - - - - - - - - - - Thumbnail - - - - - - - - - - - - - - - - -->
@@ -48,7 +50,7 @@
 													<div class="centered_buttons">
 
 														<a href="#" class="button_dark_grey middle_btn quick_view" data-modal-url="modals/quick_view.html">Quick View</a>
-														<?php if($this->session->userdata('isLoggedIn')== true) { ?>
+														
 														 <?php
 															
 															// Create form and send values in 'cart/add' function.
@@ -70,14 +72,12 @@
 															echo form_close();
 														?>
 													</div>
-											<?php } ?>
+											
 
 													</div><!--/ .centered_buttons -->
-													<?php if($this->session->userdata('isLoggedIn')== true) { ?>
 													<a href="#" class="button_dark_grey def_icon_btn middle_btn add_to_wishlist tooltip_container"><span class="tooltip right">Add to Wishlist</span></a>
 
 													<a href="#" class="button_dark_grey def_icon_btn middle_btn add_to_compare tooltip_container"><span class="tooltip left">Add to Compare</span></a>
-													<?php } ?>
 												</div><!--/ .actions_wrap-->
 												
 												<!-- - - - - - - - - - - - - - End of product actions - - - - - - - - - - - - - - - - -->
@@ -136,9 +136,14 @@
 											<!-- - - - - - - - - - - - - - End of product description - - - - - - - - - - - - - - - - -->
 
 										</div><!--/ .product_item-->
+										<br>
+										</div>
+											<?php $cnt++; }?>
 										<?php endforeach; ?>
 										<?php elseif ($count == 1): ?>
-										<?php foreach ($product1 as $product): ?>
+										<?php $cnt = 0; foreach ($product1 as $product): ?>
+										<?php if($cnt < 4) { ?>
+										<div class="col-md-3">
 										<div class="product_item">
 
 											<!-- - - - - - - - - - - - - - Thumbnail - - - - - - - - - - - - - - - - -->
@@ -154,7 +159,6 @@
 													<div class="centered_buttons">
 
 														<a href="#" class="button_dark_grey middle_btn quick_view" data-modal-url="modals/quick_view.html">Quick View</a>
-														<?php if($this->session->userdata('isLoggedIn')== true) { ?>
 															<?php                        
 																// Create form and send values in 'cart/add' function.
 																echo form_open('cart/add');
@@ -175,13 +179,10 @@
 																echo form_close();
 															?>
 															</div>
-														<?php } ?>
 													</div><!--/ .centered_buttons -->
-													<?php if($this->session->userdata('isLoggedIn')== true) { ?>
 													<a href="#" class="button_dark_grey def_icon_btn middle_btn add_to_wishlist tooltip_container"><span class="tooltip right">Add to Wishlist</span></a>
 
 													<a href="#" class="button_dark_grey def_icon_btn middle_btn add_to_compare tooltip_container"><span class="tooltip left">Add to Compare</span></a>
-													<?php } ?>
 												</div><!--/ .actions_wrap-->
 												
 												<!-- - - - - - - - - - - - - - End of product actions - - - - - - - - - - - - - - - - -->
@@ -240,9 +241,14 @@
 											<!-- - - - - - - - - - - - - - End of product description - - - - - - - - - - - - - - - - -->
 
 										</div><!--/ .product_item-->
+										<br>
+										</div>
+											<?php $cnt++; } ?>
 										<?php endforeach; ?>
 										<?php else: ?>
-										<?php foreach ($product2 as $product): ?>
+										<?php $cnt = 0; foreach ($product2 as $product): ?>
+										<?php if($cnt < 4) { ?>
+										<div class="col-md-3">
 										<div class="product_item">
 
 											<!-- - - - - - - - - - - - - - Thumbnail - - - - - - - - - - - - - - - - -->
@@ -325,6 +331,9 @@
 											<!-- - - - - - - - - - - - - - End of product description - - - - - - - - - - - - - - - - -->
 
 										</div><!--/ .product_item-->
+										<br>
+										</div>
+										<?php $cnt++; }?>
 										<?php endforeach; ?>
 										<?php endif; ?>
 										<!-- - - - - - - - - - - - - - End product - - - - - - - - - - - - - - - - -->

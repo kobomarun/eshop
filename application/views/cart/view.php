@@ -128,9 +128,9 @@
 
 											<div class="qty min clearfix">
 
-												<button class="theme_button decrease" data-direction="minus"  >&#45;</button>
+												<!-- <button class="theme_button decrease" data-direction="minus"  >&#45;</button> -->
 												<?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'], 'maxlength="3" size="1" style="text-align: right" class="qty"'); ?>
-												<button class="theme_button increase" data-direction="plus"  >&#43;</button>
+												<!-- <button class="theme_button increase" data-direction="plus"  >&#43;</button> -->
 
                       </div><!--/ .qty.min.clearfix-->
                       
