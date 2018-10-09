@@ -3,7 +3,7 @@
 	<head>
 		<!-- Basic page needs
 		============================================ -->
-		<title>N8 Shop | Home</title>
+		<title>N8 Shop | Online shopping made easy</title>
 		<meta charset="utf-8">
 		<meta name="author" content="">
 		<meta name="description" content="">
@@ -146,44 +146,12 @@
 
 										<div class="clearfix">
 
-											<!-- - - - - - - - - - - - - - Language change - - - - - - - - - - - - - - - - -->
 
-											<div class="alignright site_settings">
 
-												<span class="current open_"><img src="<?php echo base_url(); ?>assets/images/flag_en.jpg" alt="">English</span>
 
-												<ul class="dropdown site_setting_list language">
-
-													<li class="animated_item"><a href="#"><img src="<?php echo base_url(); ?>assets/images/flag_en.jpg" alt=""> English</a></li>
-													<li class="animated_item"><a href="#"><img src="<?php echo base_url(); ?>assets/images/flag_g.jpg" alt=""> German</a></li>
-													<li class="animated_item"><a href="#"><img src="<?php echo base_url(); ?>assets/images/flag_s.jpg" alt=""> Spanish</a></li>
-
-												</ul>
-
-											</div><!--/ .alignright.site_settings-->
-
-											<!-- - - - - - - - - - - - - - End of language change - - - - - - - - - - - - - - - - -->
-
-											<!-- - - - - - - - - - - - - - Currency change - - - - - - - - - - - - - - - - -->
-
-											<div class="alignright site_settings currency">
-
-												<span class="current open_">USD</span>
-
-												<ul class="dropdown site_setting_list">
-
-													<li class="animated_item"><a href="#">USD</a></li>
-													<li class="animated_item"><a href="#">EUR</a></li>
-													<li class="animated_item"><a href="#">GBP</a></li>
-
-												</ul>
-
-											</div><!--/ .alignright.site_settings.currency-->
-
-											<!-- - - - - - - - - - - - - - End of currency change - - - - - - - - - - - - - - - - -->
 
 										</div><!--/ .clearfix-->
-										
+
 										<div class="align_right v_centered">
 
 											<!-- - - - - - - - - - - - - - Wishlist & compare counters - - - - - - - - - - - - - - - - -->
@@ -191,10 +159,10 @@
 											<ul class="shop_links_list">
 
 												<li>
-													<a href="#" class="small_link"><i class="icon-heart-5"></i> Wishlist (7)</a>
+													<a href="#" class="small_link"><i class="icon-heart-5"></i> Wishlist (0)</a>
 												</li>
 												<li>
-													<a href="#" class="small_link"><i class="icon-resize-small"></i> Compare (2)</a>
+													<a href="#" class="small_link"><i class="icon-resize-small"></i> Compare (0)</a>
 												</li>
 
 											</ul><!--/ .align_right.shop_links-->
@@ -206,7 +174,7 @@
 											<?php include APPPATH.'views/cart/index.php';?>
 
 											</div><!--/ .align_right-->
-											
+
 
 </div><!--/ [col]-->
 
