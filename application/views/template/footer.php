@@ -354,16 +354,34 @@
 <script src="<?php echo base_url(); ?>assets/js/theme.core.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
 
+<!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/alertify.min.js"></script>
+
 <script type="text/javascript">
   // To conform clear all data in cart.
   function clear_cart() {
-    var result = confirm('Are you sure want to clear all bookings?');
+    // var result = confirm('Are you sure want to clear all bookings?');
 
-    if (result) {
-      window.location = "<?php echo base_url(); ?>cart/remove/all";
-    } else {
-      return false; // cancel button
-    }
+    alertify.confirm('Clear cart', 'Are you sure want to clear all bookings?', function(){ window.location = '<?php echo base_url(); ?>cart/remove/all'; } , function(){  false;}).set('closable', false).set({transition:'zoom',message: 'Transition effect: zoom'});
+
+    // if (result) {
+    //   window.location = "<php echo base_url(); ?>cart/remove/all";
+    // } else {
+    //   return false; // cancel button
+    // }
+  }
+
+  function reg_user() {
+    // var result = confirm('You have to be logged in to view cart \n\n Do you want to proceed?');
+
+    alertify.confirm('You have to be logged in to view cart', 'Do you want to proceed?', function(){ window.location = '<?php echo base_url(); ?>users/authenticate'; } , function(){  false;}).set('closable', false).set({transition:'zoom'});
+
+
+    // if (result) {
+    //   window.location = "<php echo base_url(); ?>users/authenticate";
+    // } else {
+    //   return false; // cancel button
+    // }
   }
 
   // function changeItemQuantity( id , num ) {

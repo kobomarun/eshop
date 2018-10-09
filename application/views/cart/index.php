@@ -31,14 +31,22 @@
                         ?>
                         <?php $i++; ?>
                         <?php endforeach; ?>
-                    <a href="<?php echo base_url(); ?>cart/view" >
-                    <button id="open_shopping_cart" class="" data-amount="<?php echo $i; ?>">
-                      <b class="">My Cart</b>
-                      
-                      <b class="">View Cart</b>
-                    </button></a>
-                  
-                  <?php endif; ?>
+                        <?php if($this->session->userdata('isLoggedIn')== true) { ?>
+                        
+                        <a href="<?php echo base_url(); ?>cart/view" >
+                        <button id="open_shopping_cart" class="" data-amount="<?php echo $i; ?>">
+                          <b class="">My Cart</b>
+                          
+                          <b class="">View Cart</b>
+                        </button></a>
+                      <?php }else{ ?>
+                      <button id="open_shopping_cart" class="" data-amount="<?php echo $i; ?>"  onclick="reg_user()">
+                        <b class="">My Cart</b>
+                        
+                        <b class="">View Cart</b>
+                      </button>
+                      <?php } ?>
+                    <?php endif; ?>
                 
                 
                     </div><!--/ .shopping_cart.dropdown-->

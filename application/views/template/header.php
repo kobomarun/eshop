@@ -35,6 +35,11 @@
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css">
 
+		<!-- CSS -->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/alertify.min.css"/>
+		<!-- Bootstrap theme -->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.1/build/css/themes/bootstrap.min.css"/>
+
 		<!-- JS Libs
 		============================================ -->
 		<script src="<?php echo base_url(); ?>assets/js/modernizr.js"></script>
@@ -178,7 +183,7 @@
 											<!-- - - - - - - - - - - - - - End of currency change - - - - - - - - - - - - - - - - -->
 
 										</div><!--/ .clearfix-->
-										<?php if($this->session->userdata('isLoggedIn')== true) { ?>
+										
 										<div class="align_right v_centered">
 
 											<!-- - - - - - - - - - - - - - Wishlist & compare counters - - - - - - - - - - - - - - - - -->
@@ -201,7 +206,7 @@
 											<?php include APPPATH.'views/cart/index.php';?>
 
 											</div><!--/ .align_right-->
-											<?php } ?>
+											
 
 </div><!--/ [col]-->
 
