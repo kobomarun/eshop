@@ -41,7 +41,7 @@
 
 											<div class="image_wrap">
 
-												<img src="<?php echo base_url(); ?>assets/images/<?php echo $product['photo'] ?>" alt="">
+												<img src="<?php echo base_url(); ?>assets/images/images/<?php echo $product['images'] ?>" alt="">
 
 												<!-- - - - - - - - - - - - - - Product actions - - - - - - - - - - - - - - - - -->
 
@@ -150,7 +150,7 @@
 
 											<div class="image_wrap">
 
-												<img src="<?php echo base_url(); ?>assets/images/<?php echo $product['photo'] ?>" alt="">
+												<img src="<?php echo base_url(); ?>assets/images/images/<?php echo $product['images'] ?>" alt="">
 
 												<!-- - - - - - - - - - - - - - Product actions - - - - - - - - - - - - - - - - -->
 
@@ -255,7 +255,7 @@
 
 											<div class="image_wrap">
 
-												<img src="<?php echo base_url(); ?>assets/images/<?php echo $product['photo'] ?>" alt="">
+												<img src="<?php echo base_url(); ?>assets/images/images/<?php echo $product['images'] ?>" alt="">
 
 												<!-- - - - - - - - - - - - - - Product actions - - - - - - - - - - - - - - - - -->
 

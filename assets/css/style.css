@@ -1269,7 +1269,7 @@
 		.newsletter > button,
 		.search > *:last-child{ border-radius:0 3px 3px 0; }
 
-		.search > *:last-child{ border-right:2px solid #b60a91; }
+		.search > *:last-child{ border-right:2px solid #6c00ac; }
 
 		.search .def_icon_btn{
 			width:50px;
@@ -1278,7 +1278,7 @@
 
 		.search > button::after{ content: '\ee2e'; }
 
-		.search > button:hover{ border-color: #6c00ac!important; }
+		.search > button:hover{ border-color: #dfa7ff!important; }
 
 		.search input{
 			width:calc(100% - 235px);
