@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2018 at 01:15 PM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Generation Time: Oct 15, 2018 at 02:12 PM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -77,27 +77,6 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
---
-
-CREATE TABLE `customers` (
-  `serial` int(11) NOT NULL,
-  `name` varchar(20) COLLATE latin1_general_ci NOT NULL,
-  `email` varchar(80) COLLATE latin1_general_ci NOT NULL,
-  `address` varchar(80) COLLATE latin1_general_ci NOT NULL,
-  `phone` varchar(20) COLLATE latin1_general_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
-
---
--- Dumping data for table `customers`
---
-
-INSERT INTO `customers` (`serial`, `name`, `email`, `address`, `phone`) VALUES
-(1, 'bjhb', 'a@a.com', 'jh jhb', '5477');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `deals`
 --
 
@@ -118,46 +97,6 @@ INSERT INTO `deals` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
---
-
-CREATE TABLE `orders` (
-  `serial` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `customerid` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`serial`, `date`, `customerid`) VALUES
-(1, '2018-10-06', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `order_detail`
---
-
-CREATE TABLE `order_detail` (
-  `orderid` int(11) NOT NULL,
-  `productid` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `price` float NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
-
---
--- Dumping data for table `order_detail`
---
-
-INSERT INTO `order_detail` (`orderid`, `productid`, `quantity`, `price`) VALUES
-(1, 3, 1, 150),
-(1, 4, 1, 355);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `products`
 --
 
@@ -165,7 +104,7 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL,
+  `images` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `rating` int(1) NOT NULL,
   `price` float NOT NULL
@@ -175,15 +114,33 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `name`, `photo`, `description`, `rating`, `price`) VALUES
-(1, 1, 'Paracetamol', 'ibuprofen.jpg', 'Pain killler', 4, 100),
-(2, 1, 'Mist Mag', 'ibuprofen.jpg', 'For ulcer patients', 5, 500),
-(3, 2, 'Mary Kay Powder', 'ibuprofen.jpg', 'Brown Powder', 3, 150),
-(4, 2, 'Concealer', 'dusting.jpg', 'For Hiding things', 4, 355),
-(5, 3, 'Medicated Soap', 'dusting.jpg', 'Ward off infection', 3, 400),
-(6, 3, 'Dusting Powder', 'dusting.jpg', 'Heat Rash ', 2, 670),
-(7, 4, 'GNLD Products', 'dusting.jpg', 'Ever living products', 1, 5000),
-(8, 4, 'Cod Liver Oil', 'ibuprofen.jpg', 'Nurishment', 5, 6500);
+INSERT INTO `products` (`id`, `category_id`, `name`, `images`, `description`, `rating`, `price`) VALUES
+(1, 6, '4 Station home gym machine', '4 Station home gym machine.jpg', 'Muscle builder', 4, 100),
+(2, 6, 'Analog heart rate monitor sensor', 'Analog heart rate monitor sensor.jpg', 'To monitor heart rate', 5, 500),
+(3, 5, 'baby boy Tshirt', 'baby boy Tshirt.jpg', 'baby\'s clothing', 3, 150),
+(4, 6, 'Supplement', 'B-Complex.jpg', 'Food supplements', 4, 355),
+(5, 2, 'Face primer', 'Blemish Rescue.jpg', 'Smoother and lasting make-up', 3, 400),
+(6, 2, 'Face primer', 'Bryon Bay.jpg', 'Smoother and lasting make-up', 2, 670),
+(7, 6, 'Fitness', 'C4 sport.jpg', 'keeping fit', 1, 5000),
+(8, 2, 'face primer', 'Chanel Ultra Foundation.jpg', 'smoother and lasting foundation', 5, 6500),
+(9, 5, 'changing table', 'changing table.jpg', 'for changing baby\'s diaper', 5, 5000),
+(10, 2, 'face primer', 'Cream  BB.jpg', 'for smoother and lasting foundation', 5, 5000),
+(11, 4, 'creatine for muscle building', 'creatine-for-muscle-building.jpg', 'Food supplement and vitamins', 5, 3000),
+(12, 5, 'Diaper changing pads', 'Diaper changing pads.jpg', 'changing pad', 3, 2000),
+(13, 5, 'Diaper rash ointment', 'Diaper rash ointment.jpg', ' rash ointment', 5, 3000),
+(14, 4, 'Digest gold', 'Digest gold.jpg', 'food supplement', 3, 2000),
+(15, 5, 'Dirty diaper receptacle', 'Dirty diaper receptacle.jpg', 'diaper receptacle', 4, 6000),
+(16, 6, 'Elliptical Machine', 'Elliptical Machine.jpg', 'fitness ', 5, 23000),
+(17, 6, 'forerunner 35 gps', 'forerunner 35 gps.png', 'running heart rate monitor', 6, 20000),
+(18, 5, 'changing table', 'changing table.jpg', 'for changing baby\'s diaper', 5, 5000),
+(19, 2, 'face primer', 'Cream  BB.jpg', 'for smoother and lasting foundation', 5, 5000),
+(20, 4, 'creatine for muscle building', 'creatine-for-muscle-building.jpg', 'Food supplement and vitamins', 5, 3000),
+(21, 5, 'Diaper changing pads', 'Diaper changing pads.jpg', 'changing pad', 3, 2000),
+(22, 5, 'Diaper rash ointment', 'Diaper rash ointment.jpg', ' rash ointment', 5, 3000),
+(23, 4, 'Digest gold', 'Digest gold.jpg', 'food supplement', 3, 2000),
+(24, 5, 'Dirty diaper receptacle', 'Dirty diaper receptacle.jpg', 'diaper receptacle', 4, 6000),
+(25, 6, 'Elliptical Machine', 'Elliptical Machine.jpg', 'fitness ', 5, 23000),
+(26, 6, 'forerunner 35 gps', 'forerunner 35 gps.png', 'running heart rate monitor', 6, 20000);
 
 -- --------------------------------------------------------
 
@@ -227,6 +184,21 @@ INSERT INTO `subcategories` (`id`, `category_id`, `name`) VALUES
 (23, 4, 'Women\'s Multivitamin'),
 (24, 4, 'Men\'s Multivitamins');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -238,22 +210,10 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `customers`
---
-ALTER TABLE `customers`
-  ADD PRIMARY KEY (`serial`);
-
---
 -- Indexes for table `deals`
 --
 ALTER TABLE `deals`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`serial`);
 
 --
 -- Indexes for table `products`
@@ -268,6 +228,12 @@ ALTER TABLE `subcategories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -278,34 +244,28 @@ ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `customers`
---
-ALTER TABLE `customers`
-  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `deals`
 --
 ALTER TABLE `deals`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `subcategories`
 --
 ALTER TABLE `subcategories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
