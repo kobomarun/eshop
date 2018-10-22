@@ -22,7 +22,7 @@ class Products extends CI_Controller{
 
     // load the cateories view
     $this->load->view('template/header');
-    $this->load->view('cart/index');
+    // $this->load->view('cart/index');
     $this->load->view('products/index', $data);
     $this->load->view('template/footer');  
 
@@ -41,7 +41,7 @@ class Products extends CI_Controller{
 
 		 // load the categories post view
     $this->load->view('template/header');		
-    $this->load->view('cart/index');
+    // $this->load->view('cart/index');
 		$this->load->view('products/index', $data);			
 		$this->load->view('template/footer');
   }
