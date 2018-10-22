@@ -6005,8 +6005,8 @@ transition-duration:0.1s;
 	}
 
 	#header .topbar > li{
-		display: block;
-		margin: 3px 0 0;
+		display: inline;
+		margin: 10px 0 0;
 		text-align: center;
 	}
 

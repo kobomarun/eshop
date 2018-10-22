@@ -14,7 +14,7 @@
 
           <li data-transition="papercut" data-slotamount="7">
 
-            <img src="<?php echo base_url(); ?>/assets/images/home_slide_4.jpg" alt="">
+            <img src="<?php echo base_url(); ?>/assets/images/images/Polar h10 heart rate sensor.png" alt="">
 
             <div class="caption sfl stl layer_1" data-x="left" data-hoffset="60" data-y="90" data-easing="easeOutBack" data-speed="600" data-start="900">Best Quality</div>
 
@@ -34,7 +34,7 @@
 
           <li data-transition="papercut" data-slotamount="7" class="align_center">
 
-            <img src="<?php echo base_url(); ?>/assets/images/home_slide_5.jpg" alt="">
+            <img src="<?php echo base_url(); ?>/assets/images/images/Dirty diaper receptacle.jpg" alt="">
 
             <div class="caption sfl stl layer_5" data-x="center" data-y="77" data-easing="easeOutBack" data-speed="600" data-start="900">Have A Question?</div>
 
@@ -52,7 +52,7 @@
 
           <li data-transition="papercut" data-slotamount="7">
 
-            <img src="<?php echo base_url(); ?>/assets/images/home_slide_6.jpg" alt="">
+            <img src="<?php echo base_url(); ?>/assets/images/images/Analog heart rate monitor sensor.jpg" alt="">
 
             <div class="caption sfl stl layer_8" data-x="right" data-y="73" data-hoffset="-60" data-easing="easeOutBack" data-speed="600" data-start="900">Get 10% Off</div>
 
