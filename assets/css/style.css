@@ -2258,7 +2258,7 @@
 
 		.submenu .submenu > li:first-child > a{ border-radius: 0 3px 0 0; }
 
-		.has_submenu > a::after,
+		/* .has_submenu > a::after,
 		.has_megamenu > a::after{
 			content: "\eda4";
 			right: 18px;
@@ -2267,7 +2267,7 @@
 			top: 50%;
 			color: #b2b2b2;
 			margin-top: -10px;
-		}
+		} */
 
 		.has_submenu .has_submenu > a{ padding-right: 40px; }
 
