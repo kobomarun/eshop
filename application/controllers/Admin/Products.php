@@ -35,7 +35,7 @@ class Products extends CI_Controller {
 
 	public function addproduct() {
 
-		$config['upload_path'] = './upload/products';
+		$config['upload_path'] = './uploads/products';
 		$config['allowed_types'] = 'jpeg|jpg|png';
 		$config['overwrite']  = true;
 		$config['remove_spaces']  = true;
@@ -43,7 +43,7 @@ class Products extends CI_Controller {
 		$config['image_width']  = '1200';
 		$config['image_height']  = '1200';
 
-		print_r($config['upload_path']); exit;
+		//print_r($config['upload_path']); exit;
 
 		$this->load->library('upload', $config);
 		if ( ! $this->upload->do_upload())
