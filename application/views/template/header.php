@@ -26,6 +26,7 @@
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/fontello.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 		<!-- Theme CSS
 		============================================ -->
@@ -97,8 +98,8 @@
 											<ul class="topbar">
 
 												<li><a href="<?php echo base_url(); ?>">Home</a></li>
-												<li><a href="<?php echo base_url(); ?>myaccount">My Account</a></li>
 												<?php if($this->session->userdata('isLoggedIn')== true) { ?>
+												<li><a href="<?php echo base_url(); ?>myaccount">My Account</a></li>												
 												<li><a href="<?php echo base_url(); ?>users/signout">Logout</a></li>
 											<?php } else { ?>
 												<li><a href="<?php echo base_url(); ?>users/register">Register</a></li>

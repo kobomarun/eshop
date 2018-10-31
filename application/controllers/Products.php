@@ -8,6 +8,8 @@ class Products extends CI_Controller{
 
     // get the categories from the database in category table
     $data['categories'] = $this->category_model->get_categories();
+    // $data['menu_items'] = $this->menu->get_title_and_url();
+    // $data['current'] = $this->uri->uri_string();
 
     $config['base_url'] = base_url().'products/index/';
     $config['total_rows'] = $this->db->count_all('products');;

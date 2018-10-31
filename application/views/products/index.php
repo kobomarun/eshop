@@ -10,8 +10,12 @@
   <!-- - - - - - - - - - - - - - Navigation of tabs - - - - - - - - - - - - - - - - -->
 
   <ul class="tabs_nav clearfix">
-    <?php foreach ($categories as $category): ?>
-      <li> <a href="<?php echo base_url('products/category/'.$category['id']);?>"><?php echo $category['name'];?></a></li>                  
+    <?php $c=1; foreach ($categories as $category): ?>
+      <!-- <php if($c = 1) { ?><php echo ($m['menu_url'] == $current ? "class='active'" : "");?>
+        <li class="active"> <a href="<php echo base_url('products/category/'.$category['id']);?>"><php echo $category['name'];?></a></li>
+      <php $c++; }else{?> -->
+      <li > <a href="<?php echo base_url('products/category/'.$category['id']);?>" ><?php echo $category['name'];?></a></li>                  
+      <!-- <php } ?> -->
     <?php endforeach; ?>
   </ul>
   <br>
