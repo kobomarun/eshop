@@ -6,7 +6,7 @@
                   <button id="open_shopping_cart" class="" data-amount="0">
                     <b class="">My Cart</b>
                     
-                    <b >No Product <br> in Cart</b>
+                    <b > product(s) </b>
                   </button>
                   <?php endif; ?>
                   <?php

@@ -10,6 +10,9 @@ $route['translate_uri_dashes'] = true;
 $route['cart/view'] = 'cart/view';
 $route['cart'] = 'cart/index';
 
+$route['admin/login'] = 'admin/login';
+// $route['admin'] = 'admin/login';
+
 $route['products/index'] = 'products/index';
 $route['products'] = 'products';
 // $route['products/(:any)'] = 'products/view/$1';

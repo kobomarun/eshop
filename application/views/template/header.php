@@ -26,7 +26,6 @@
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/fontello.css">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 		<!-- Theme CSS
 		============================================ -->
@@ -98,8 +97,8 @@
 											<ul class="topbar">
 
 												<li><a href="<?php echo base_url(); ?>">Home</a></li>
+												<li><a href="<?php echo base_url(); ?>myaccount">My Account</a></li>
 												<?php if($this->session->userdata('isLoggedIn')== true) { ?>
-												<li><a href="<?php echo base_url(); ?>myaccount">My Account</a></li>												
 												<li><a href="<?php echo base_url(); ?>users/signout">Logout</a></li>
 											<?php } else { ?>
 												<li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
@@ -126,7 +125,7 @@
 												<ul class="categories_list dropdown">
 
 													<?php foreach ($categories as $category): ?>
-														<li class="animated_item" > <a href="<?php echo site_url('#'.$category['name']);?>"><?php echo $category['name'];?></a></li>
+														<li class="animated_item" > <a href="<?php echo base_url('products/category/'.$category['id']);?>"><?php echo $category['name'];?></a></li>
 													<?php endforeach; ?>
 
 												</ul>
@@ -143,16 +142,17 @@
 
 									</div><!--/ [col]-->
 
+									
 									<div class="col-lg-3 col-md-4 col-sm-3">
-
+									<br>
 										<div class="clearfix">
 
+											
 
-
-
+											
 
 										</div><!--/ .clearfix-->
-
+										
 										<div class="align_right v_centered">
 
 											<!-- - - - - - - - - - - - - - Wishlist & compare counters - - - - - - - - - - - - - - - - -->
@@ -175,7 +175,7 @@
 											<?php include APPPATH.'views/cart/index.php';?>
 
 											</div><!--/ .align_right-->
-
+											
 
 </div><!--/ [col]-->
 

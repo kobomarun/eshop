@@ -6,6 +6,15 @@
           <?php echo $this->session->flashdata('success'); ?>
         </div>
       <?php } ?>
+      <?php if($this->session->flashdata('product_deleted')) { ?>
+        <div class="alert alert-success">
+          <?php echo $this->session->flashdata('product_deleted'); ?>
+        </div>
+      <?php } ?><?php if($this->session->flashdata('product_updated')) { ?>
+          <div class="alert alert-danger">
+            <?php echo $this->session->flashdata('product_updated'); ?>
+          </div>
+        <?php } ?>
         <h3 class="box-title m-b-0">Data Export</h3>
         <p class="text-muted m-b-30">Export data to Copy, CSV, Excel, PDF &amp; Print</p>
         <div class="table-responsive">
@@ -30,11 +39,14 @@
                     <td class=""><?php echo $row->name; ?></td>
                     <td><?php echo $row->description; ?></td>
                     <td><?php echo $row->price; ?></td>
-                    <td><?php echo$this->db->get_where('categories',array('id'=>$row->category_id))->row()->name; ?></td>
+                    <td><?php echo $this->db->get_where('categories',array('id'=>$row->category_id))->row()->name; ?></td>
                      <td><img class="img-thumbnail" src="<?php echo base_url(); ?>uploads/products/<?php echo $row->images; ?>" width="120px" alt="<?php echo $row->name; ?>"></td>
+                     <!-- <php if( $this->session->userdata('type') === 1): ?> -->
                     <td>
-                      <a href="<?php echo base_url(); ?>products/edit/<?php echo $row->id; ?>"><button class="btn btn-primary">Edit</button></a> |
-                     </td>
+                      <a href="<?php echo base_url(); ?>admin/products/edit/<?php echo $row->id; ?>"><input type="button" value="Edit" class="btn btn-primary"></a> | <br><br> 
+                      <?php echo form_open('admin/products/delete/'.$row->id) ?><input type="submit" value="Delete" class="btn btn-danger" ></form>
+                    </td>
+                  <!-- <php endif; ?> -->
                 </tr>
               <?php } } ?>
             </tbody>

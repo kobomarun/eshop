@@ -8,7 +8,7 @@
     <?php foreach ($categories as $category): ?>
       <li class="has_megamenu">
 
-        <a href="<?php echo site_url('#'.$category['name']); ?>"><?php echo $category['name'];  ?></a>
+        <a href="<?php echo base_url(); ?>products/category1/<?php echo $category['id'];  ?>"><?php echo $category['name'];  ?></a>
 
         <!-- - - - - - - - - - - - - - End of mega menu - - - - - - - - - - - - - - - - -->
 

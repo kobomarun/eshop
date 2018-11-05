@@ -249,7 +249,7 @@
 												
 												<th>Order Date</th>
 
-												<td>September 5, 2014</td>
+												<td><?php echo $today = date("F j, Y."); ?></td>
 
 											</tr>
 
@@ -329,19 +329,19 @@
 
 														</tr>
 
-														<tr>
+														<!-- <tr>
 																
 															<th>Company Name</th>
 
-															<td>-</td>
+															<td><input type="text" id="cname" name="cname" placeholder="Enter Coman" /></td>
 
-														</tr>
+														</tr> -->
 
 														<tr>
 																
 															<th>Name</th>
 
-															<td><?php echo $this->session->userdata('fname'); ?></td>
+															<td><?php echo $this->session->userdata('name'); ?></td>
 
 														</tr>
 
@@ -349,7 +349,7 @@
 																
 															<th>Address</th>
 
-															<td>Street Name 123</td>
+															<td><input type="text" id="address" name="address" placeholder="Enter Address" /></td>
 
 														</tr>
 
@@ -357,23 +357,23 @@
 																
 															<th>Zip/Postal Code</th>
 
-															<td>2000</td>
+															<td><input type="text" id="zip" name="zip" placeholder="Enter Zip/Postal Code" /></td>
 
 														</tr>
 
-														<tr>
+														<!-- <tr>
 																
 															<th>City</th>
 
-															<td>New York</td>
+															<td><input type="text" id="city" name="city" placeholder="Enter City" /></td>
 
-														</tr>
+														</tr> -->
 
 														<tr>
 																
 															<th>Country</th>
 
-															<td>USA</td>
+															<td><input type="text" id="country" name="country" placeholder="Enter Country" /></td>
 
 														</tr>
 
@@ -381,7 +381,7 @@
 																
 															<th>State</th>
 
-															<td>NY</td>
+															<td><input type="text" id="state" name="state" placeholder="Enter State" /></td>
 
 														</tr>
 
@@ -389,7 +389,7 @@
 																
 															<th>Phone</th>
 
-															<td>876-54-32</td>
+															<td><input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" /></td>
 
 														</tr>
 
@@ -419,19 +419,19 @@
 
 													<tbody>
 
-														<tr>
+														<!-- <tr>
 																
 															<th>Company Name</th>
 
 															<td>-</td>
 
-														</tr>
+														</tr> -->
 
 														<tr>
 																
 															<th>Name</th>
 
-															<td><?php echo $this->session->userdata('fname'); ?></td>
+															<td><input type="text" id="rname" name="rname" placeholder="Enter Recipient Name" /></td>
 
 														</tr>
 
@@ -439,7 +439,7 @@
 																
 															<th>Address</th>
 
-															<td>Street Name 123</td>
+															<td><input type="text" id="raddress" name="raddress" placeholder="Enter Recipient Address" /></td>
 
 														</tr>
 
@@ -447,11 +447,11 @@
 																
 															<th>Zip/Postal Code</th>
 
-															<td>2000</td>
+															<td><input type="text" id="rzip" name="rzip" placeholder="Enter Recipient Zip Code" /></td>
 
 														</tr>
 
-														<tr>
+														<!-- <tr>
 																
 															<th>City</th>
 
@@ -459,11 +459,11 @@
 
 														</tr>
 
-														<tr>
+														<tr> -->
 																
 															<th>Country</th>
 
-															<td>USA</td>
+															<td><input type="text" id="rcountry" name="rcountry" placeholder="Enter Country" /></td>
 
 														</tr>
 
@@ -471,7 +471,7 @@
 																
 															<th>State</th>
 
-															<td>NY</td>
+															<td><input type="text" id="rstate" name="rstate" placeholder="Enter State" /></td>
 
 														</tr>
 
@@ -479,7 +479,7 @@
 																
 															<th>Phone</th>
 
-															<td>876-54-32</td>
+															<td><input type="tel" id="rphone" name="rphone" placeholder="Enter Recipient Phone Number" /></td>
 
 														</tr>
 

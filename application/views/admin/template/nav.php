@@ -5,7 +5,7 @@
     <div class="sidebar-nav navbar-collapse slimscrollsidebar">
         <ul class="nav" id="side-menu">
 
-            <li> <a href="<?php echo base_url();?>admindash" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </span></a></li>
+            <li> <a href="<?php echo base_url();?>admin/admindash" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </span></a></li>
             <li><a href="javascript:void(0);" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Orders<span class="fa arrow"></span></span></a>
                 <ul class="nav nav-second-level">
                     <li> <a href="<?php echo base_url(); ?>admin/orders/">View All Orders</a></li>

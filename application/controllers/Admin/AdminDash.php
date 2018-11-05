@@ -37,4 +37,11 @@ class AdminDash extends CI_Controller {
 		$this->load->view('admin/admin-dash');
 		$this->load->view('admin/template/footer');
 	}
+
+	public function logout() {
+		$this->session->sess_destroy();
+		$this->session->set_flashdata('success', 'You have successfully logged out');
+
+		redirect('admin/login');
+	}
 }

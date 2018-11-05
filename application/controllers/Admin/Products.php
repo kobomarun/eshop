@@ -15,6 +15,8 @@ class Products extends CI_Controller {
 	{
 		$data['pageName'] = "Dashboard";
 		$data['view'] = $this->db->get('products')->result();
+		
+		$data['product'] = $this->db->get('products')->result_array();
 
 		$this->load->view('admin/template/header');
 		$this->load->view('admin/template/nav',$data);
@@ -45,6 +47,7 @@ class Products extends CI_Controller {
 
 		//print_r($config['upload_path']); exit;
 
+		$this->upload->initialize($config);
 		$this->load->library('upload', $config);
 		if ( ! $this->upload->do_upload())
 		{
@@ -77,4 +80,64 @@ class Products extends CI_Controller {
 			}
 		}
 	}
+
+	public function edit($id){
+    // check login before giving edit product access
+    if(!$this->session->userdata('type')){
+      redirect('admin/login');
+    }
+
+    // get the id from the database
+    $data['product'] = $this->product_model->get_product($id);
+
+
+		$data['categories'] = $this->category_model->get_categories();
+
+		// $data['data1'] = $this->upload->data();
+
+    // check if the is no product
+    if(empty($data['product'])){
+      show_404();
+    }
+
+    $data['pageName'] = 'Edit Product';
+
+    // load edit post view
+    $this->load->view('admin/template/header');
+		$this->load->view('admin/template/nav',$data);
+		$this->load->view('admin/edit-product',$data);
+		$this->load->view('admin/template/footer');
+	}
+	
+	public function updateproduct(){
+    // check login before giving update product access
+    if(!$this->session->userdata('type')){
+      redirect('admin/login');
+    }
+
+    // passing the id parameter to the models update product function
+    $this->product_model->update_product($id);
+
+    // send message using session library
+    $this->session->set_flashdata('post_updated', 'Your post has been updated');
+
+    redirect('admin/products');
+  }
+
+	// delete each product
+  public function delete($id){
+    // check login before giving delete product access
+    if(!$this->session->userdata('type')){
+      redirect('admin/login');
+    }
+
+    // calls the model delete function
+    $this->product_model->delete_product($id);
+
+     // send message using session library
+     $this->session->set_flashdata('product_deleted', 'Your product has been deleted');
+
+    // load index view
+    redirect('admin/products');
+  }
 }
